@@ -8,7 +8,7 @@
     "rating": 4.8,
     "slotsAvailable": 3,
     "description": "Acoustic guitar classes for complete beginners.",
-    "image": "https://i.postimg.cc/example1.png",
+    "image": "https://i.ibb.co/9m4qvZ96/Guiter-lesson.jpg",
     "category": "Music"
   },
   {
@@ -20,7 +20,7 @@
     "rating": 4.6,
     "slotsAvailable": 5,
     "description": "Conversational English sessions for non-native speakers.",
-    "image": "https://i.postimg.cc/example2.png",
+    "image": "https://i.ibb.co/5h5s2Bgy/spoken-english.jpg",
     "category": "Language"
   },
   {
@@ -32,7 +32,7 @@
     "rating": 4.9,
     "slotsAvailable": 4,
     "description": "Gentle yoga sessions focused on flexibility and mindfulness.",
-    "image": "https://i.postimg.cc/example3.png",
+    "image": "https://i.ibb.co/v6WhvGMP/shayna-douglas-f-ZJo-PDoan-IM-unsplash.jpg",
     "category": "Wellness"
   },
   {
@@ -44,7 +44,7 @@
     "rating": 4.7,
     "slotsAvailable": 2,
     "description": "Learn HTML, CSS, and JavaScript basics to build your first website.",
-    "image": "https://i.postimg.cc/example4.png",
+    "image": "https://i.ibb.co/0j8PCSLW/Web-Dev.jpg",
     "category": "Tech"
   },
   {
@@ -56,7 +56,7 @@
     "rating": 4.5,
     "slotsAvailable": 6,
     "description": "Practice everyday Spanish phrases with a native speaker.",
-    "image": "https://i.postimg.cc/example5.png",
+    "image": "https://i.ibb.co/gF63WK4f/spanish.jpg",
     "category": "Language"
   },
   {
@@ -68,7 +68,7 @@
     "rating": 4.9,
     "slotsAvailable": 2,
     "description": "Learn to draw digitally using Procreate or Photoshop.",
-    "image": "https://i.postimg.cc/example6.png",
+    "image": "https://i.ibb.co/d4h16T1r/Digital.jpg",
     "category": "Art"
   },
   {
@@ -80,7 +80,7 @@
     "rating": 4.6,
     "slotsAvailable": 3,
     "description": "Overcome stage fear and speak with clarity and impact.",
-    "image": "https://i.postimg.cc/example7.png",
+    "image": "https://i.ibb.co/Vp38npRb/public-speaking.jpg",
     "category": "Communication"
   },
   {
@@ -92,7 +92,7 @@
     "rating": 4.7,
     "slotsAvailable": 4,
     "description": "Master framing, lighting, and storytelling through photos.",
-    "image": "https://i.postimg.cc/example8.png",
+    "image": "https://i.ibb.co/1GC74d02/photography.jpg",
     "category": "Photography"
   }
 ]

@@ -1,6 +1,6 @@
-// src/context/AuthContext.jsx
 import { createContext, useEffect, useState } from "react";
-import app from "../firebase/firebase.config";
+import { app } from "../firebase/firebase.config";
+
 import {
   getAuth,
   createUserWithEmailAndPassword,
@@ -41,7 +41,6 @@ const AuthProvider = ({ children }) => {
     return signOut(auth);
   };
 
-  // Track auth state
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
@@ -61,7 +60,9 @@ const AuthProvider = ({ children }) => {
     setUser,
   };
 
-  return <AuthContext value={authData}>{children}</AuthContext>;
+  return (
+    <AuthContext.Provider value={authData}>{children}</AuthContext.Provider>
+  );
 };
 
 export default AuthProvider;

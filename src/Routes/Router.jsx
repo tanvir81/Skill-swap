@@ -4,12 +4,24 @@ import AuthLayout from "../Pages/AuthLayout";
 import Login from "../Pages/Login";
 import SignUp from "../Pages/SignUp";
 import Home from "../Pages/Home";
+import SkillDetails from "../Pages/SkillDetails";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <HomeLayout />,
-    children: [{ path: "/", element: <Home /> }],
+    children: [
+      { path: "/", element: <Home /> },
+      {
+        path: "details/:id",
+        element: (
+          <PrivateRoute>
+            <SkillDetails />
+          </PrivateRoute>
+        ),
+      },
+    ],
   },
   {
     path: "/auth",
@@ -20,8 +32,12 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: "/details",
-    element: <h2>details</h2>,
+    path: "/details/:id",
+    element: (
+      <PrivateRoute>
+        <SkillDetails />
+      </PrivateRoute>
+    ),
   },
   {
     path: "/*",

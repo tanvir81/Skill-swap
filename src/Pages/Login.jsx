@@ -1,67 +1,124 @@
-import React, { useContext, useState } from "react";
+import { useState, useContext } from "react";
+import { Link, useNavigate, useLocation } from "react-router";
 import { AuthContext } from "../context/AuthContext";
-import { Link, useNavigate } from "react-router";
+import {
+  signInWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup,
+} from "firebase/auth";
+import { auth } from "../firebase/firebase.config";
+import { toast } from "react-hot-toast";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
-  const { signIn } = useContext(AuthContext);
-  const navigate = useNavigate();
+  const { setUser } = useContext(AuthContext);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [showPass, setShowPass] = useState(false);
   const [error, setError] = useState("");
+
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
 
   const handleLogin = (e) => {
     e.preventDefault();
-    const form = e.target;
-    const email = form.email.value;
-    const password = form.password.value;
+    setError("");
 
-    signIn(email, password)
-      .then(() => {
-        setError("");
-        navigate("/");
+    signInWithEmailAndPassword(auth, email, password)
+      .then((res) => {
+        setUser(res.user);
+        toast.success("Login successful");
+        navigate(from, { replace: true });
       })
       .catch((err) => {
         setError(err.message);
+        toast.error("Login failed");
+      });
+  };
+
+  const handleGoogleLogin = () => {
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(auth, provider)
+      .then((res) => {
+        setUser(res.user);
+        toast.success("Logged in with Google");
+        navigate(from, { replace: true });
+      })
+      .catch((err) => {
+        setError(err.message);
+        toast.error("Google login failed");
       });
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-base-200">
-      <form
-        onSubmit={handleLogin}
-        className="card bg-base-100 w-full max-w-sm shadow-2xl"
-      >
-        <div className="card-body">
-          <h2 className="text-2xl font-semibold text-center">Login</h2>
-          {error && <div className="alert alert-error text-sm">{error}</div>}
-          <label className="label">Email</label>
-          <input
-            name="email"
-            type="email"
-            className="input"
-            placeholder="Email"
-            required
-          />
-          <label className="label">Password</label>
-          <input
-            name="password"
-            type="password"
-            className="input"
-            placeholder="Password"
-            required
-          />
-          <div className="mt-2">
-            <a className="link link-hover text-sm">Forgot password?</a>
+    <div className="min-h-screen flex items-center justify-center px-4">
+      <div className="w-full max-w-md bg-base-100 p-8 rounded shadow">
+        <h2 className="text-2xl font-bold text-center mb-6">
+          Login to SkillSwap
+        </h2>
+
+        <form onSubmit={handleLogin} className="space-y-4">
+          <div>
+            <label className="label">Email</label>
+            <input
+              type="email"
+              className="input input-bordered w-full"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
           </div>
-          <button type="submit" className="btn btn-neutral mt-4">
+
+          <div>
+            <label className="label">Password</label>
+            <div className="relative">
+              <input
+                type={showPass ? "text" : "password"}
+                className="input input-bordered w-full pr-10"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+              <span
+                className="absolute right-3 top-3 cursor-pointer text-gray-500"
+                onClick={() => setShowPass(!showPass)}
+              >
+                {showPass ? <FaEyeSlash /> : <FaEye />}
+              </span>
+            </div>
+          </div>
+
+          {error && <p className="text-red-500 text-sm">{error}</p>}
+
+          <button type="submit" className="btn btn-primary w-full">
             Login
           </button>
-          <p className="text-center font-semibold pt-5">
-            Dont’t Have An Account ?{" "}
-            <Link to="/auth/signup" className="text-secondary font-semibold">
-              SignUp
-            </Link>{" "}
-          </p>
+        </form>
+
+        <div className="text-sm text-center mt-4">
+          <Link
+            to="/auth/forgot-password"
+            state={{ email }}
+            className="link link-hover text-blue-500"
+          >
+            Forgot Password?
+          </Link>
         </div>
-      </form>
+
+        <div className="divider">OR</div>
+
+        <button onClick={handleGoogleLogin} className="btn btn-outline w-full">
+          Continue with Google
+        </button>
+
+        <p className="text-sm text-center mt-4">
+          Don’t have an account?{" "}
+          <Link to="/auth/signup" className="link link-hover text-blue-500">
+            Sign Up
+          </Link>
+        </p>
+      </div>
     </div>
   );
 };
