@@ -1,17 +1,11 @@
 import { useState, useContext } from "react";
 import { Link, useNavigate, useLocation } from "react-router";
 import { AuthContext } from "../context/AuthContext";
-import {
-  signInWithEmailAndPassword,
-  GoogleAuthProvider,
-  signInWithPopup,
-} from "firebase/auth";
-import { auth } from "../firebase/firebase.config";
 import { toast } from "react-hot-toast";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
-  const { setUser } = useContext(AuthContext);
+  const { signIn, signInWithGoogle, setUser } = useContext(AuthContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPass, setShowPass] = useState(false);
@@ -21,34 +15,32 @@ const Login = () => {
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
     setError("");
-
-    signInWithEmailAndPassword(auth, email, password)
-      .then((res) => {
-        setUser(res.user);
-        toast.success("Login successful");
-        navigate(from, { replace: true });
-      })
-      .catch((err) => {
-        setError(err.message);
-        toast.error("Login failed");
-      });
+    try {
+      const res = await signIn(email, password);
+      setUser(res.user);
+      toast.success("Login successful");
+      navigate(from, { replace: true });
+    } catch (err) {
+      setError(err.message);
+      toast.error("Login failed");
+    }
   };
 
-  const handleGoogleLogin = () => {
-    const provider = new GoogleAuthProvider();
-    signInWithPopup(auth, provider)
-      .then((res) => {
-        setUser(res.user);
-        toast.success("Logged in with Google");
-        navigate(from, { replace: true });
-      })
-      .catch((err) => {
-        setError(err.message);
-        toast.error("Google login failed");
-      });
+  const handleGoogleLogin = async () => {
+    setError("");
+    try {
+      const res = await signInWithGoogle();
+      console.log(res);
+      // setUser(res.user);
+      toast.success("Logged in with Google");
+      navigate(from, { replace: true });
+    } catch (err) {
+      setError(err.message);
+      toast.error("Google login failed");
+    }
   };
 
   return (
