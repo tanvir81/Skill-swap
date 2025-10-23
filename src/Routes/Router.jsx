@@ -6,6 +6,8 @@ import SignUp from "../Pages/SignUp";
 import Home from "../Pages/Home";
 import SkillDetails from "../Pages/SkillDetails";
 import PrivateRoute from "./PrivateRoute";
+import ForgotPassword from "../Pages/ForgotPassword";
+import MyProfile from "../Pages/MyProfile";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +23,14 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
+      {
+        path: "/profile",
+        element: (
+          <PrivateRoute>
+            <MyProfile />
+          </PrivateRoute>
+        ),
+      },
     ],
   },
   {
@@ -29,6 +39,7 @@ const router = createBrowserRouter([
     children: [
       { path: "login", element: <Login /> },
       { path: "signup", element: <SignUp /> },
+      { path: "forgot-password", element: <ForgotPassword /> },
     ],
   },
   {
