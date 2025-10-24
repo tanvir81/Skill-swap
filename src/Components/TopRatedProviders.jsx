@@ -33,10 +33,16 @@ const TopRatedProviders = () => {
               />
             </figure>
             <div className="card-body">
-              <h3 className="text-lg font-semibold">{skill.skillName}</h3>
-              <p className="text-sm text-gray-500">By: {skill.providerName}</p>
-              <p className="text-sm text-gray-500">Rating: ⭐ {skill.rating}</p>
-              <p className="text-sm text-gray-500">Price: ${skill.price}</p>
+              <h3 className="text-lg font-semibold text-[#f96c1f]">
+                {skill.skillName}
+              </h3>
+              <p className="text-[16px] text-[#045c90]">
+                By: {skill.providerName}
+              </p>
+              <p className="text-sm text-[#045c90]">
+                Rating: ⭐ {skill.rating}
+              </p>
+              <p className="text-sm text-[#f96c1f]">Price: ${skill.price}</p>
             </div>
           </div>
         ))}

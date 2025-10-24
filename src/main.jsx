@@ -4,14 +4,14 @@ import "./index.css";
 import App from "./App.jsx";
 
 import AuthProvider from "./context/AuthContext";
-import { Toaster } from "react-hot-toast"; // ✅ Add this
+import { Toaster } from "react-hot-toast";
 import AppRouter from "./AppRouter.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <AuthProvider>
       <AppRouter />
-      <Toaster position="top-center" reverseOrder={false} /> {/* ✅ Add this */}
+      <Toaster position="top-center" reverseOrder={false} />
     </AuthProvider>
   </StrictMode>
 );

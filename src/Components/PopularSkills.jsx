@@ -20,7 +20,7 @@ const PopularSkills = () => {
         {skills.slice(0, 8).map((skill) => (
           <div
             key={skill.skillId}
-            className="card bg-base-100 shadow-md hover:shadow-xl transition border border-[#045c90] "
+            className="card bg-base-100 shadow-md hover:shadow-xl transition border border-[#045c90]"
           >
             <figure>
               <img
@@ -29,18 +29,22 @@ const PopularSkills = () => {
                 className="h-48 w-full object-cover"
               />
             </figure>
-            <div className="card-body ">
-              <h3 className="text-lg font-semibold">{skill.skillName}</h3>
-              <p className="text-sm text-gray-500">Rating: ⭐ {skill.rating}</p>
-              <p className="text-sm text-gray-500">Price: ${skill.price}</p>
-              <div className="card-actions justify-end mt-4">
-                <Link
-                  to={`/details/${skill.skillId}`}
-                  className="btn btn-sm btn-primary"
-                >
-                  View Details
-                </Link>
+            <div className="card-body space-y-3">
+              <h3 className="text-lg font-semibold text-[#045c90]">
+                {skill.skillName}
+              </h3>
+              <div className="flex justify-between text-sm">
+                <p className="text-[#045c90]">Rating: ⭐ {skill.rating}</p>
+                <p className="text-[#f96c1f]">Price: ${skill.price}</p>
               </div>
+            </div>
+            <div className="px-5 mb-5">
+              <Link
+                to={`/details/${skill.skillId}`}
+                className="block w-full text-center text-sm py-1.5 rounded bg-[#045c90] text-white hover:bg-[#f96c1f] transition-colors"
+              >
+                View Details
+              </Link>
             </div>
           </div>
         ))}

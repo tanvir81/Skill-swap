@@ -82,7 +82,7 @@ const Navbar = () => {
                 }
                 alt="User"
                 referrerPolicy="no-referrer"
-                className="w-10 h-10 rounded-full border-2 border-neutral object-cover"
+                className="w-10 h-10 rounded-full border-1 border-[#045c90] object-cover"
                 onError={(e) => {
                   e.target.src = "https://i.postimg.cc/3x3QzSGq/profile.png";
                 }}
@@ -92,7 +92,10 @@ const Navbar = () => {
               </span>
             </div>
 
-            <button onClick={logOut} className="btn btn-sm btn-outline">
+            <button
+              onClick={logOut}
+              className="btn btn-sm border-[#f96c1f] text- hover:bg-[#f96c1f] hover:text-white transition duration-200"
+            >
               Logout
             </button>
           </div>

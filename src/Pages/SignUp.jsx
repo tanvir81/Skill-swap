@@ -57,6 +57,8 @@ const SignUp = () => {
     try {
       const result = await signInWithGoogle();
       // setUser(result.user);
+      console.log(result);
+
       toast.success("Signed up with Google!");
       navigate("/");
     } catch (err) {
