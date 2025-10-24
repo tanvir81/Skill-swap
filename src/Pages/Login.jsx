@@ -2,7 +2,7 @@ import { useState, useContext } from "react";
 import { Link, useNavigate, useLocation } from "react-router";
 import { AuthContext } from "../context/AuthContext";
 import { toast } from "react-hot-toast";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 
 const Login = () => {
   const { signIn, signInWithGoogle, setUser } = useContext(AuthContext);
@@ -101,7 +101,7 @@ const Login = () => {
         <div className="divider">OR</div>
 
         <button onClick={handleGoogleLogin} className="btn btn-outline w-full">
-          Continue with Google
+          <FaGoogle className="mr-2" /> Continue with Google
         </button>
 
         <p className="text-sm text-center mt-4">

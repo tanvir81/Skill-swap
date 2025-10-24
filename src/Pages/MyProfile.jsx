@@ -109,7 +109,11 @@ const MyProfile = () => {
         <img
           src={photo || "https://i.postimg.cc/3x3QzSGq/profile.png"}
           alt="Profile"
+          referrerPolicy="no-referrer"
           className="w-24 h-24 rounded-full object-cover border-2 border-primary"
+          onError={(e) => {
+            e.target.src = "https://i.postimg.cc/3x3QzSGq/profile.png";
+          }}
         />
         <h3 className="mt-3 text-lg font-bold text-primary">{name}</h3>
         <p className="text-sm font-medium text-gray-600">{user?.email}</p>
