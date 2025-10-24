@@ -4,7 +4,6 @@ import PopularSkills from "../Components/PopularSkills";
 import TopRatedProviders from "../Components/TopRatedProviders";
 import HowItWorks from "../Components/HowItWorks";
 import Testimonials from "../Components/Testimonials";
-import ScrollingHeadline from "../Components/ScrollingHeadline";
 
 const Home = () => {
   return (

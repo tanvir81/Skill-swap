@@ -40,6 +40,7 @@ const SignUp = () => {
 
     try {
       const result = await createUser(email, password);
+      console.log(result);
       await updateUser({ displayName: name, photoURL: photo });
       toast.success("Signup successful!");
       navigate("/");

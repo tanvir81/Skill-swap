@@ -9,6 +9,8 @@ import PrivateRoute from "./PrivateRoute";
 import ForgotPassword from "../Pages/ForgotPassword";
 import MyProfile from "../Pages/MyProfile";
 import ErrorPage from "../Pages/ErrorPage";
+import ContactInfo from "../Pages/ContactInfo";
+import Trams from "../Pages/Trams";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +34,14 @@ const router = createBrowserRouter([
             <MyProfile />
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/contact",
+        element: <ContactInfo />,
+      },
+      {
+        path: "/privacy",
+        element: <Trams />,
       },
     ],
   },

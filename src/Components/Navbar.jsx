@@ -29,7 +29,6 @@ const Navbar = () => {
 
   return (
     <div className="navbar border-b border-[#f96c1f] bg-base-100 shadow-md px-4">
-      {/* 🍔 Hamburger for small screens */}
       <div className="navbar-start">
         <div className="dropdown lg:hidden">
           <label tabIndex={0} className="btn btn-ghost">
@@ -56,7 +55,6 @@ const Navbar = () => {
           </ul>
         </div>
 
-        {/* 🖼️ Logo always visible, scaled down */}
         <Link to="/">
           <img
             src={logo}
@@ -66,12 +64,10 @@ const Navbar = () => {
         </Link>
       </div>
 
-      {/* 🖥️ Horizontal nav links for large screens */}
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 space-x-2">{navLinks}</ul>
       </div>
 
-      {/* 🔐 Auth buttons or avatar */}
       <div className="navbar-end space-x-2">
         {user ? (
           <div className="flex items-center gap-3">

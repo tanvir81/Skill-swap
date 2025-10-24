@@ -6,7 +6,7 @@ import { useLocation } from "react-router";
 
 const ForgotPassword = () => {
   const location = useLocation();
-  const passedEmail = location.state?.email || ""; // get email from login page
+  const passedEmail = location.state?.email || "";
   const [email, setEmail] = useState(passedEmail);
   const [error, setError] = useState("");
 

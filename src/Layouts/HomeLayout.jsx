@@ -8,13 +8,15 @@ const HomeLayout = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <ScrollingHeadline />
+
       <nav>
-        <Navbar></Navbar>
+        <Navbar />
+        {/* {import.meta.env.VITE_name} */}
       </nav>
-      <main className="flex-`grow`">
-        <Outlet></Outlet>
+      <main className="flex-grow">
+        <Outlet />
       </main>
-      <Footer></Footer>
+      <Footer />
     </div>
   );
 };
