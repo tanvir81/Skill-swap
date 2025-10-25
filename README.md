@@ -1,5 +1,5 @@
-your project name - SkillSwap
-Live URL —
+Project Name - SkillSwap
+Live URL —https://meek-longma-711520.netlify.app/
 
 Purpose — The goal of SkillSwap is to help users connect through their talents. Whether you are a designer, developer, or musician, you can create a profile, list your skills, and explore others' offerings.
 
