@@ -1,13 +1,26 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
-import { useNavigate, Link } from "react-router";
+import { useNavigate, useLocation, Link } from "react-router";
 import { toast } from "react-hot-toast";
 import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 
 const SignUp = () => {
   const { createUser, updateUser, signInWithGoogle, setUser } =
     useContext(AuthContext);
+
   const navigate = useNavigate();
+  const location = useLocation();
+
+  let from = "/";
+  if (location.state?.from?.pathname) {
+    from = location.state.from.pathname;
+  } else {
+    const stored = sessionStorage.getItem("redirectAfterAuth");
+    if (stored && !stored.startsWith("/auth")) {
+      from = stored;
+    }
+  }
+
   const [error, setError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -40,10 +53,11 @@ const SignUp = () => {
 
     try {
       const result = await createUser(email, password);
-      console.log(result);
       await updateUser({ displayName: name, photoURL: photo });
+      setUser(result.user);
       toast.success("Signup successful!");
-      navigate("/");
+      navigate(from, { replace: true });
+      sessionStorage.removeItem("redirectAfterAuth");
     } catch (err) {
       setError(err.message);
       toast.error("Signup failed");
@@ -57,11 +71,10 @@ const SignUp = () => {
     setLoading(true);
     try {
       const result = await signInWithGoogle();
-      // setUser(result.user);
-      console.log(result);
-
+      setUser(result.user);
       toast.success("Signed up with Google!");
-      navigate("/");
+      navigate(from, { replace: true });
+      sessionStorage.removeItem("redirectAfterAuth");
     } catch (err) {
       setError(err.message);
       toast.error("Google sign-in failed");
@@ -84,7 +97,7 @@ const SignUp = () => {
           Sign Up
         </h2>
         <div className="card-body space-y-4">
-          {error && <div className="alert alert-error text-sm">{error}</div>}
+          {error && <div className="text-sm text-red-500">{error}</div>}
 
           <label className="label">Name</label>
           <input
@@ -173,6 +186,7 @@ const SignUp = () => {
               className="font-semibold"
               style={{ color: "#045c90" }}
               to="/auth/login"
+              state={location.state}
             >
               Login
             </Link>

@@ -7,6 +7,8 @@ const PrivateRoute = ({ children }) => {
   const location = useLocation();
 
   if (!user) {
+    sessionStorage.setItem("redirectAfterAuth", location.pathname);
+
     return <Navigate to="/auth/login" state={{ from: location }} replace />;
   }
 
