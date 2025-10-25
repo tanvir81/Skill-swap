@@ -74,41 +74,51 @@ const SignUp = () => {
     <div className="flex justify-center items-center min-h-screen bg-base-200">
       <form
         onSubmit={handleSignUp}
-        className="card bg-base-100 w-full max-w-sm shadow-2xl py-5"
+        className="card w-full max-w-sm shadow-2xl py-5 rounded-xl bg-base-100"
+        style={{ border: "2px solid #045c90" }}
       >
-        <h2 className="font-semibold text-2xl text-center">Sign Up</h2>
-        <div className="card-body">
+        <h2
+          className="font-semibold text-2xl text-center"
+          style={{ color: "#045c90" }}
+        >
+          Sign Up
+        </h2>
+        <div className="card-body space-y-4">
           {error && <div className="alert alert-error text-sm">{error}</div>}
+
           <label className="label">Name</label>
           <input
             name="name"
             type="text"
-            className="input"
+            className="input input-bordered"
             placeholder="Name"
             required
           />
+
           <label className="label">Photo URL</label>
           <input
             name="photo"
             type="text"
-            className="input"
+            className="input input-bordered"
             placeholder="Photo URL"
             required
           />
+
           <label className="label">Email</label>
           <input
             name="email"
             type="email"
-            className="input"
+            className="input input-bordered"
             placeholder="Email"
             required
           />
+
           <label className="label">Password</label>
           <div className="relative">
             <input
               name="password"
               type={showPassword ? "text" : "password"}
-              className="input w-full pr-10"
+              className="input input-bordered w-full pr-10"
               placeholder="Password"
               required
             />
@@ -122,16 +132,26 @@ const SignUp = () => {
 
           <button
             type="submit"
-            className="btn btn-neutral mt-4 flex items-center justify-center"
+            className="btn text-white mt-4 flex items-center justify-center"
+            style={{
+              backgroundColor: "#045c90",
+              transition: "background-color 0.3s ease",
+            }}
+            onMouseEnter={(e) =>
+              (e.currentTarget.style.backgroundColor = "#f96c1f")
+            }
+            onMouseLeave={(e) =>
+              (e.currentTarget.style.backgroundColor = "#045c90")
+            }
             disabled={loading}
           >
             {loading ? (
               <>
                 <span className="loading loading-spinner loading-sm mr-2"></span>
-                Registering...
+                Signing Up...
               </>
             ) : (
-              "Register"
+              "Sign Up"
             )}
           </button>
 
@@ -140,7 +160,7 @@ const SignUp = () => {
           <button
             type="button"
             onClick={handleGoogleSignUp}
-            className="btn btn-outline w-full flex items-center justify-center"
+            className="btn btn-outline w-full flex items-center justify-center hover:border-[#045c90]"
             disabled={loading}
           >
             <FaGoogle className="mr-2" />
@@ -149,7 +169,11 @@ const SignUp = () => {
 
           <p className="text-center pt-5 text-sm">
             Already have an account?{" "}
-            <Link className="text-secondary font-semibold" to="/auth/login">
+            <Link
+              className="font-semibold"
+              style={{ color: "#045c90" }}
+              to="/auth/login"
+            >
               Login
             </Link>
           </p>

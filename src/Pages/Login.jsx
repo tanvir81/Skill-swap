@@ -44,9 +44,15 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4">
-      <div className="w-full max-w-md bg-base-100 p-8 rounded shadow">
-        <h2 className="text-2xl font-bold text-center mb-6">
+    <div className="min-h-screen flex items-center justify-center px-4 bg-base-200">
+      <div
+        className="w-full max-w-md bg-base-100 p-8 rounded-xl shadow"
+        style={{ border: "2px solid #045c90" }}
+      >
+        <h2
+          className="text-2xl font-bold text-center mb-6"
+          style={{ color: "#045c90" }}
+        >
           Login to SkillSwap
         </h2>
 
@@ -83,7 +89,20 @@ const Login = () => {
 
           {error && <p className="text-red-500 text-sm">{error}</p>}
 
-          <button type="submit" className="btn btn-primary w-full">
+          <button
+            type="submit"
+            className="btn text-white w-full"
+            style={{
+              backgroundColor: "#045c90",
+              transition: "background-color 0.3s ease",
+            }}
+            onMouseEnter={(e) =>
+              (e.currentTarget.style.backgroundColor = "#f96c1f")
+            }
+            onMouseLeave={(e) =>
+              (e.currentTarget.style.backgroundColor = "#045c90")
+            }
+          >
             Login
           </button>
         </form>
@@ -92,7 +111,8 @@ const Login = () => {
           <Link
             to="/auth/forgot-password"
             state={{ email }}
-            className="link link-hover text-blue-500"
+            className="font-semibold"
+            style={{ color: "#045c90" }}
           >
             Forgot Password?
           </Link>
@@ -100,13 +120,20 @@ const Login = () => {
 
         <div className="divider">OR</div>
 
-        <button onClick={handleGoogleLogin} className="btn btn-outline w-full">
+        <button
+          onClick={handleGoogleLogin}
+          className="btn btn-outline w-full hover:border-[#045c90]"
+        >
           <FaGoogle className="mr-2" /> Continue with Google
         </button>
 
         <p className="text-sm text-center mt-4">
           Don’t have an account?{" "}
-          <Link to="/auth/signup" className="link link-hover text-blue-500">
+          <Link
+            to="/auth/signup"
+            className="font-semibold"
+            style={{ color: "#045c90" }}
+          >
             Sign Up
           </Link>
         </p>

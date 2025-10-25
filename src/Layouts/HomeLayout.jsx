@@ -11,7 +11,6 @@ const HomeLayout = () => {
 
       <nav>
         <Navbar />
-        {/* {import.meta.env.VITE_name} */}
       </nav>
       <main className="flex-grow">
         <Outlet />

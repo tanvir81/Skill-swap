@@ -10,7 +10,7 @@
 .swiper-button-prev {
   width: 32px !important;
   height: 32px !important;
-  color: #f96c1f !important; /* Your brand orange */
+  color: #f96c1f !important; 
 }
 
 .swiper-button-next::after,
@@ -20,5 +20,5 @@
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  color: #045c90 !important; /* Your brand blue */
+  color: #045c90 !important; 
 }

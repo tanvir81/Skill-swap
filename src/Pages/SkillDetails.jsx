@@ -36,7 +36,6 @@ const SkillDetails = () => {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-10 space-y-10">
-      {/* Skill Details Section */}
       <h1 className="font-bold text-2xl text-[#f96c1f]">Course Details</h1>
 
       <div
@@ -59,7 +58,6 @@ const SkillDetails = () => {
         <p className="text-gray-700 mt-4">{skill.description}</p>
       </div>
 
-      {/* Book Session Form */}
       <div
         className="p-6 rounded-lg border border-[#045c90] bg-base-200"
         style={{ boxShadow: "0 4px 12px #045c90" }}

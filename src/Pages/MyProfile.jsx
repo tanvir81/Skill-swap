@@ -53,7 +53,6 @@ const MyProfile = () => {
           <p className="text-sm font-medium text-gray-600">{user?.email}</p>
         </div>
 
-        {/* Toggle Button */}
         {!editing && (
           <button
             onClick={() => setEditing(true)}
@@ -63,7 +62,6 @@ const MyProfile = () => {
           </button>
         )}
 
-        {/* Update Form */}
         {editing && (
           <form onSubmit={handleUpdate} className="space-y-4">
             <div>

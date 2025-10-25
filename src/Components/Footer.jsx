@@ -5,7 +5,7 @@ import { Link } from "react-router";
 const Footer = () => {
   return (
     <footer className="bottom-0 w-full bg-[#045c90] text-white p-10 rounded footer footer-horizontal footer-center">
-      {/* Navigation Links */}
+  
 
       <nav className="grid grid-flow-col gap-4 text-sm">
         <Link to="/contact" className="hover:underline">
@@ -15,7 +15,7 @@ const Footer = () => {
           Privacy policy
         </Link>
       </nav>
-      {/* Social Icons */}
+   
       <nav>
         <div className="grid grid-flow-col gap-4 text-xl">
           <a
@@ -44,7 +44,7 @@ const Footer = () => {
           </a>
         </div>
       </nav>
-      {/* Footer Note */}
+    
       <aside className="text-sm mt-4">
         <p>Copyright ©2025 - All rights reserved by SkillSwap Ltd</p>
       </aside>

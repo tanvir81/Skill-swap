@@ -1,4 +1,3 @@
-// src/AppRouter.jsx
 import { useContext } from "react";
 import { RouterProvider } from "react-router";
 import router from "./Routes/Router";
