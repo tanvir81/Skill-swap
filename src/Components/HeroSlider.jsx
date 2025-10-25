@@ -9,7 +9,7 @@ const slides = [
   {
     title: "Learn Web Development",
     subtitle: "Master HTML, CSS, JavaScript & React",
-    image: "https://i.ibb.co/0vvNyYc/growtika-58-K6-WZiwd0g-unsplash.jpg",
+    image: "https://i.ibb.co/fzKjKVhH/WebDev.jpg",
   },
   {
     title: "Become a UI UX Designer",
@@ -19,12 +19,12 @@ const slides = [
   {
     title: "Become a Graphic Designer",
     subtitle: "Photoshop, Illustrator, and branding skills",
-    image: "https://i.ibb.co/jkt37nb0/emily-bernal-v9v-II5g-V8-Lw-unsplash.jpg",
+    image: "https://i.ibb.co/N2GS45Bk/Graphic.jpg",
   },
   {
     title: "Master English Language",
     subtitle: "Learn client communication",
-    image: "https://i.ibb.co/RpRnGwSs/tim-mossholder-WE-Kv-ZB1l0-unsplash.jpg",
+    image: "https://i.ibb.co/hzC48RH/Language.jpg",
   },
 ];
 
@@ -42,12 +42,14 @@ const HeroSlider = () => {
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
             <div
-              className="relative flex flex-col items-center justify-center text-white h-[32rem] w-full rounded-lg bg-cover bg-center"
+              className="relative h-[32rem] w-full rounded-lg bg-cover bg-center text-white"
               style={{ backgroundImage: `url(${slide.image})` }}
             >
-              <div className="bg-black/35 p-8 rounded-lg text-center max-w-xl">
+              <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 bg-black/35 p-6 rounded-lg text-center max-w-xl">
                 <h2 className="text-4xl font-bold">{slide.title}</h2>
-                <p className="mt-2 text-lg text-[#f96c1f]">{slide.subtitle}</p>
+                <p className="mt-2 text-xl font-semibold text-accent">
+                  {slide.subtitle}
+                </p>
               </div>
             </div>
           </SwiperSlide>

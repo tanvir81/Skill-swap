@@ -12,6 +12,7 @@ const HomeLayout = () => {
       <nav>
         <Navbar />
       </nav>
+
       <main className="flex-grow">
         <Outlet />
       </main>

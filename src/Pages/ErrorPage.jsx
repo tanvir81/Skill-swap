@@ -11,7 +11,7 @@ const ErrorPage = () => {
           Oops! You broke the internet... kinda.
         </h1>
         <p className="text-lg text-[#045c90] mb-6">
-          This page doesn’t exist — but hey, at least you found this cool image.
+          This page doesn't exist — but hey, at least you found this cool image.
         </p>
         <img
           src={errorImage}
