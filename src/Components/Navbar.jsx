@@ -6,6 +6,7 @@ import logo from "../assets/SkillSwap.png";
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
 
+  
   const navLinks = (
     <>
       <li>
