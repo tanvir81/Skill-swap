@@ -39,7 +39,7 @@ const ScrollingHeadline = () => {
   return (
     <div
       ref={containerRef}
-      className="relative overflow-hidden bg-[#f96c1f] text-white h-10 flex items-center text-sm font-medium"
+      className="fixed top-0 left-0 right-0 z-50 overflow-hidden bg-[#f96c1f] text-white h-10 flex items-center text-sm font-medium"
     >
       <animated.div
         ref={textRef}

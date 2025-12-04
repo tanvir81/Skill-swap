@@ -35,33 +35,82 @@ const SkillDetails = () => {
     );
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-10 space-y-10">
-      <h1 className="font-bold text-2xl text-[#f96c1f]">Course Details</h1>
+    <div className="max-w-5xl mx-auto px-4 mt-30 py-10 space-y-10">
+      <h1 className="font-bold text-3xl text-[#f96c1f] mb-6 text-center">
+        Course Details
+      </h1>
 
-      <div
-        className="p-6 rounded-lg border border-[#f96c1f] bg-base-200"
-        style={{ boxShadow: "0 4px 12px #f96c1f" }}
-      >
-        <img
-          src={skill.image}
-          alt={skill.skillName}
-          className="w-full h-64 object-cover rounded-lg mb-6"
-        />
-        <h2 className="text-3xl font-bold text-[#f96c1f] mb-2">
-          {skill.skillName}
-        </h2>
-        <p className="text-[#045c90] mb-2">
-          Provider: {skill.providerName} ({skill.providerEmail})
-        </p>
-        <p className="text-[#045c90] mb-2">Rating: ⭐ {skill.rating}</p>
-        <p className="text-[#f96c1f] mb-2">Price: ${skill.price}</p>
-        <p className="text-gray-700 mt-4">{skill.description}</p>
+      {/* Image and Table Layout */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-6 rounded-lg border border-[#f96c1f] bg-base-200 shadow-lg">
+        {/* Left: Image */}
+        <div className="flex justify-center">
+          <img
+            src={skill.image}
+            alt={skill.skillName}
+            className="w-full h-122 object-cover rounded-lg"
+          />
+        </div>
+
+        {/* Right side Table */}
+        <div className="overflow-x-auto">
+          <table className="table w-full">
+            <tbody>
+              <tr>
+                <td className="font-semibold text-[#045c90]">Title</td>
+                <td>{skill.skillName}</td>
+              </tr>
+              <tr>
+                <td className="font-semibold text-[#045c90]">Provider</td>
+                <td>
+                  {skill.providerName} ({skill.providerEmail})
+                </td>
+              </tr>
+              <tr>
+                <td className="font-semibold text-[#045c90]">Category</td>
+                <td>{skill.category}</td>
+              </tr>
+              <tr>
+                <td className="font-semibold text-[#045c90]">Rating</td>
+                <td>⭐ {skill.rating}</td>
+              </tr>
+              <tr>
+                <td className="font-semibold text-[#045c90]">Price</td>
+                <td>${skill.price}</td>
+              </tr>
+              <tr>
+                <td className="font-semibold text-[#045c90]">
+                  Slots Available
+                </td>
+                <td>{skill.slotsAvailable}</td>
+              </tr>
+              {skill.duration && (
+                <tr>
+                  <td className="font-semibold text-[#045c90]">Duration</td>
+                  <td>{skill.duration}</td>
+                </tr>
+              )}
+              {skill.level && (
+                <tr>
+                  <td className="font-semibold text-[#045c90]">Level</td>
+                  <td>{skill.level}</td>
+                </tr>
+              )}
+              {skill.location && (
+                <tr>
+                  <td className="font-semibold text-[#045c90]">Location</td>
+                  <td>{skill.location}</td>
+                </tr>
+              )}
+            </tbody>
+          </table>
+          <p className="mt-4 text-gray-700">
+            {skill.fullDescription || skill.description}
+          </p>
+        </div>
       </div>
 
-      <div
-        className="p-6 rounded-lg border border-[#045c90] bg-base-200"
-        style={{ boxShadow: "0 4px 12px #045c90" }}
-      >
+      {/* Booking Form */}
+      <div className="p-6 rounded-lg border border-[#045c90] bg-base-200 shadow-lg">
         <h3 className="text-xl font-semibold mb-4 text-[#045c90]">
           Book a Session
         </h3>

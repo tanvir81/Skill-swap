@@ -8,6 +8,14 @@
     "rating": 4.8,
     "slotsAvailable": 3,
     "description": "Acoustic guitar classes for complete beginners.",
+    "fullDescription": "Learn guitar from scratch with Alex Martin. This course covers chords, strumming, fingerstyle, and performance tips. Perfect for beginners who want to play songs confidently.",
+    "duration": "6 weeks",
+    "level": "Beginner",
+    "location": "Online / Zoom",
+    "reviews": [
+      "Great teacher, very patient!",
+      "I can play my first song now."
+    ],
     "image": "https://i.ibb.co/9m4qvZ96/Guiter-lesson.jpg",
     "category": "Music"
   },
@@ -20,6 +28,14 @@
     "rating": 4.6,
     "slotsAvailable": 5,
     "description": "Conversational English sessions for non-native speakers.",
+    "fullDescription": "Improve your fluency and confidence in English with Sara. Sessions include role-play, pronunciation practice, and real-life conversation topics.",
+    "duration": "4 weeks",
+    "level": "Intermediate",
+    "location": "Dhaka, Bangladesh / Online",
+    "reviews": [
+      "Sara helped me prepare for interviews.",
+      "My confidence in speaking has grown a lot."
+    ],
     "image": "https://i.ibb.co/5h5s2Bgy/spoken-english.jpg",
     "category": "Language"
   },
@@ -32,6 +48,14 @@
     "rating": 4.9,
     "slotsAvailable": 4,
     "description": "Gentle yoga sessions focused on flexibility and mindfulness.",
+    "fullDescription": "Rina’s yoga classes combine breathing techniques, stretching, and meditation. Ideal for stress relief and improving posture.",
+    "duration": "8 weeks",
+    "level": "Beginner",
+    "location": "Barisal, Bangladesh",
+    "reviews": [
+      "I feel more relaxed after every class.",
+      "Helped me with back pain."
+    ],
     "image": "https://i.ibb.co/v6WhvGMP/shayna-douglas-f-ZJo-PDoan-IM-unsplash.jpg",
     "category": "Wellness"
   },
@@ -44,7 +68,15 @@
     "rating": 4.7,
     "slotsAvailable": 2,
     "description": "Learn HTML, CSS, and JavaScript basics to build your first website.",
-    "image": "https://i.ibb.co/0j8PCSLW/Web-Dev.jpg",
+    "fullDescription": "Tanvir’s course introduces frontend fundamentals with hands-on projects. You’ll build a portfolio site and learn modern practices.",
+    "duration": "10 weeks",
+    "level": "Beginner to Intermediate",
+    "location": "Online / GitHub Classroom",
+    "reviews": [
+      "Very practical, I built my first site!",
+      "Tanvir explains concepts clearly."
+    ],
+    "image": "https://i.ibb.co/39pxWpXr/2151948231.jpg",
     "category": "Tech"
   },
   {
@@ -56,6 +88,14 @@
     "rating": 4.5,
     "slotsAvailable": 6,
     "description": "Practice everyday Spanish phrases with a native speaker.",
+    "fullDescription": "Luis teaches conversational Spanish with cultural context. Learn greetings, travel phrases, and everyday vocabulary.",
+    "duration": "5 weeks",
+    "level": "Beginner",
+    "location": "Online / WhatsApp",
+    "reviews": [
+      "Luis makes learning fun!",
+      "I can now talk to my Spanish friends."
+    ],
     "image": "https://i.ibb.co/gF63WK4f/spanish.jpg",
     "category": "Language"
   },
@@ -68,6 +108,14 @@
     "rating": 4.9,
     "slotsAvailable": 2,
     "description": "Learn to draw digitally using Procreate or Photoshop.",
+    "fullDescription": "Meher’s course covers sketching, coloring, and shading digitally. Includes assignments and portfolio reviews.",
+    "duration": "12 weeks",
+    "level": "Intermediate",
+    "location": "Online / Discord",
+    "reviews": [
+      "I improved my art portfolio.",
+      "Great tips for digital brushes."
+    ],
     "image": "https://i.ibb.co/d4h16T1r/Digital.jpg",
     "category": "Art"
   },
@@ -80,6 +128,14 @@
     "rating": 4.6,
     "slotsAvailable": 3,
     "description": "Overcome stage fear and speak with clarity and impact.",
+    "fullDescription": "John’s sessions include speech writing, delivery practice, and confidence-building exercises.",
+    "duration": "6 weeks",
+    "level": "Beginner to Intermediate",
+    "location": "Online / Zoom",
+    "reviews": [
+      "I delivered my first speech confidently.",
+      "Helped me at work presentations."
+    ],
     "image": "https://i.ibb.co/Vp38npRb/public-speaking.jpg",
     "category": "Communication"
   },
@@ -92,7 +148,160 @@
     "rating": 4.7,
     "slotsAvailable": 4,
     "description": "Master framing, lighting, and storytelling through photos.",
+    "fullDescription": "Nadia’s course teaches composition rules, lighting techniques, and editing basics. Includes photo critiques.",
+    "duration": "8 weeks",
+    "level": "Intermediate",
+    "location": "Dhaka, Bangladesh",
+    "reviews": [
+      "My photos look professional now.",
+      "Loved the feedback sessions."
+    ],
     "image": "https://i.ibb.co/1GC74d02/photography.jpg",
     "category": "Photography"
+  },
+  {
+    "skillId": 9,
+    "skillName": "Cooking Basics",
+    "providerName": "Ayesha Rahman",
+    "providerEmail": "ayesha@skillswap.com",
+    "price": 14,
+    "rating": 4.6,
+    "slotsAvailable": 5,
+    "description": "Learn essential cooking techniques and recipes.",
+    "fullDescription": "Ayesha teaches knife skills, seasoning basics, and easy recipes for everyday meals. Perfect for beginners.",
+    "duration": "6 weeks",
+    "level": "Beginner",
+    "location": "Dhaka, Bangladesh",
+    "reviews": ["Loved the hands-on approach.", "Now I can cook confidently."],
+    "image": "https://i.ibb.co/tT2PGRp7/104880.jpg",
+    "category": "Cooking"
+  },
+  {
+    "skillId": 10,
+    "skillName": "Graphic Design with Canva",
+    "providerName": "Imran Chowdhury",
+    "providerEmail": "imran@skillswap.com",
+    "price": 20,
+    "rating": 4.7,
+    "slotsAvailable": 4,
+    "description": "Create stunning visuals using Canva.",
+    "fullDescription": "Learn how to design posters, social media posts, and presentations with Canva’s tools.",
+    "duration": "4 weeks",
+    "level": "Beginner",
+    "location": "Online",
+    "reviews": [
+      "Very practical course.",
+      "Helped me with my business branding."
+    ],
+    "image": "https://i.ibb.co/7twS0fZC/127500.jpg",
+    "category": "Design"
+  },
+  {
+    "skillId": 11,
+    "skillName": "Mobile App Development",
+    "providerName": "Shahidul Islam",
+    "providerEmail": "shahidul@skillswap.com",
+    "price": 35,
+    "rating": 4.8,
+    "slotsAvailable": 3,
+    "description": "Build Android apps with Flutter.",
+    "fullDescription": "Shahidul covers Dart basics, Flutter widgets, and deployment to Google Play.",
+    "duration": "10 weeks",
+    "level": "Intermediate",
+    "location": "Online / GitHub Classroom",
+    "reviews": ["Built my first app!", "Great explanations and support."],
+    "image": "https://i.ibb.co/y3MVLyk/10354235-4428861.jpg",
+    "category": "Tech"
+  },
+  {
+    "skillId": 12,
+    "skillName": "Creative Writing Workshop",
+    "providerName": "Farhana Akter",
+    "providerEmail": "farhana@skillswap.com",
+    "price": 18,
+    "rating": 4.5,
+    "slotsAvailable": 6,
+    "description": "Improve storytelling and writing skills.",
+    "fullDescription": "Farhana helps you develop plot, characters, and style through writing exercises.",
+    "duration": "8 weeks",
+    "level": "Beginner to Intermediate",
+    "location": "Online / Zoom",
+    "reviews": [
+      "Boosted my confidence in writing.",
+      "Loved the feedback sessions."
+    ],
+    "image": "https://i.ibb.co/rR1rW2W9/123770.jpg",
+    "category": "Writing"
+  },
+  {
+    "skillId": 13,
+    "skillName": "Basic Drawing Skills",
+    "providerName": "Rafiq Hasan",
+    "providerEmail": "rafiq@skillswap.com",
+    "price": 12,
+    "rating": 4.4,
+    "slotsAvailable": 5,
+    "description": "Learn pencil sketching and shading.",
+    "fullDescription": "Rafiq teaches line drawing, shading, and perspective for beginners.",
+    "duration": "5 weeks",
+    "level": "Beginner",
+    "location": "Barisal, Bangladesh",
+    "reviews": ["Improved my sketching.", "Fun and easy to follow."],
+    "image": "https://i.ibb.co/60nMwDH3/18128.jpg",
+    "category": "Art"
+  },
+  {
+    "skillId": 14,
+    "skillName": "Digital Marketing Essentials",
+    "providerName": "Nusrat Jahan",
+    "providerEmail": "nusrat@skillswap.com",
+    "price": 28,
+    "rating": 4.7,
+    "slotsAvailable": 4,
+    "description": "Learn SEO, social media, and ads.",
+    "fullDescription": "Nusrat covers SEO basics, Facebook ads, and content strategy for small businesses.",
+    "duration": "6 weeks",
+    "level": "Intermediate",
+    "location": "Online",
+    "reviews": [
+      "Helped me grow my business.",
+      "Very informative and practical."
+    ],
+    "image": "https://i.ibb.co/SDVXL7WX/2150208260.jpg",
+    "category": "Business"
+  },
+  {
+    "skillId": 15,
+    "skillName": "Basic Sewing Skills",
+    "providerName": "Shahana Begum",
+    "providerEmail": "shahana@skillswap.com",
+    "price": 15,
+    "rating": 4.6,
+    "slotsAvailable": 5,
+    "description": "Learn hand stitching and machine basics.",
+    "fullDescription": "Shahana teaches sewing techniques, fabric handling, and simple clothing repairs.",
+    "duration": "6 weeks",
+    "level": "Beginner",
+    "location": "Khulna, Bangladesh",
+    "reviews": ["Now I can fix my clothes.", "Very useful skill."],
+    "image": "https://i.ibb.co/27FHz2qZ/Sewing.jpg",
+    "category": "Craft"
+  },
+  {
+    "skillId": 16,
+    "skillName": "Basic Computer Skills",
+    "providerName": "Mahmudul Hasan",
+    "providerEmail": "mahmudul@skillswap.com",
+    "price": 10,
+    "rating": 4.5,
+    "slotsAvailable": 8,
+    "description": "Learn MS Word, Excel, and PowerPoint.",
+    "fullDescription": "Mahmudul teaches essential computer skills for office and academic use.",
+    "duration": "4 weeks",
+    "level": "Beginner",
+    "location": "Dhaka, Bangladesh",
+    "reviews": ["Helped me at work.", "Easy to understand lessons."],
+    "image": "https://i.ibb.co/whx28J9d/Computer.jpg",
+    "category": "Tech"
   }
 ]

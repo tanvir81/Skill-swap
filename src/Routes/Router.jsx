@@ -11,6 +11,9 @@ import MyProfile from "../Pages/MyProfile";
 import ErrorPage from "../Pages/ErrorPage";
 import ContactInfo from "../Pages/ContactInfo";
 import Trams from "../Pages/Trams";
+import AllItems from "../Pages/AllItems";
+import AboutUs from "../Pages/AboutUs";
+import Support from "../Pages/Support";
 
 const router = createBrowserRouter([
   {
@@ -21,11 +24,7 @@ const router = createBrowserRouter([
       { path: "/", element: <Home /> },
       {
         path: "details/:id",
-        element: (
-          <PrivateRoute>
-            <SkillDetails />
-          </PrivateRoute>
-        ),
+        element: <SkillDetails />,
       },
       {
         path: "/profile",
@@ -36,8 +35,21 @@ const router = createBrowserRouter([
         ),
       },
       {
+        path: "/allitems",
+        element: <AllItems></AllItems>,
+      },
+      {
+        path: "/aboutus",
+        element: <AboutUs></AboutUs>,
+      },
+
+      {
         path: "/contact",
         element: <ContactInfo />,
+      },
+      {
+        path: "/support",
+        element: <Support></Support>,
       },
       {
         path: "/privacy",

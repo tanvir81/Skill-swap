@@ -4,6 +4,8 @@ import PopularSkills from "../Components/PopularSkills";
 import TopRatedProviders from "../Components/TopRatedProviders";
 import HowItWorks from "../Components/HowItWorks";
 import Testimonials from "../Components/Testimonials";
+import UpcomingEvents from "../Components/UpcomingEvents";
+import WhyChooseSkillSwap from "../Components/WhyChooseSkillSwap";
 
 const Home = () => {
   return (
@@ -13,6 +15,8 @@ const Home = () => {
       <TopRatedProviders />
       <HowItWorks />
       <Testimonials />
+      <UpcomingEvents></UpcomingEvents>
+      <WhyChooseSkillSwap></WhyChooseSkillSwap>
     </div>
   );
 };
