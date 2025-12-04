@@ -40,7 +40,6 @@ const SkillDetails = () => {
         Course Details
       </h1>
 
-      {/* Image and Table Layout */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-6 rounded-lg border border-[#f96c1f] bg-base-200 shadow-lg">
         {/* Left: Image */}
         <div className="flex justify-center">
@@ -51,7 +50,6 @@ const SkillDetails = () => {
           />
         </div>
 
-        {/* Right side Table */}
         <div className="overflow-x-auto">
           <table className="table w-full">
             <tbody>
@@ -75,7 +73,7 @@ const SkillDetails = () => {
               </tr>
               <tr>
                 <td className="font-semibold text-[#045c90]">Price</td>
-                <td>${skill.price}</td>
+                <td className="text-green-500 text-lg">${skill.price}</td>
               </tr>
               <tr>
                 <td className="font-semibold text-[#045c90]">
