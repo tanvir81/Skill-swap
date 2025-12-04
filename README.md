@@ -39,7 +39,7 @@ Comprehensive profile management
 
 Real-time data updates for user profiles
 
-Live URL: https://meek-longma-711520.netlify.app/
+Live URL:https://extraordinary-gelato-cb7f0b.netlify.app/
 
 ## Key Features
 
